@@ -1,9 +1,9 @@
 {
-  "_router-8c4102b6.js": {
+  "_router-0c133be8.js": {
     "css": [
       "assets/router-5480478b.css"
     ],
-    "file": "assets/router-8c4102b6.js"
+    "file": "assets/router-0c133be8.js"
   },
   "resources/css/app.css": {
     "file": "assets/app-61224285.css",
@@ -11,17 +11,17 @@
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-c41a2a27.js",
+    "file": "assets/app-1f9bd13a.js",
     "imports": [
-      "_router-8c4102b6.js"
+      "_router-0c133be8.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/vue.js": {
-    "file": "assets/vue-16c48d32.js",
+    "file": "assets/vue-6c8f5d11.js",
     "imports": [
-      "_router-8c4102b6.js"
+      "_router-0c133be8.js"
     ],
     "isEntry": true,
     "src": "resources/js/vue.js"
