@@ -8,7 +8,7 @@
             {{ cls.title }}</h3>
             <div class="absolute right-2 flex flex-row">
                 <span class="mr-5"><font-awesome-icon icon="clock" class="mx-1"/> {{parseTimeFromMins(cls.study_time_in_minutes)}} </span>
-                <button @click="uploadFileTo={type:'file',id:cls.id}" class="mx-1 text-blue-500 rounded-circle shadow h-[30px] w-[30px] p-1 hover:bg-gray-400 transition"><font-awesome-icon icon="file-upload"/> </button>
+                <button @click="uploadFileTo={type:'note',id:cls.id}" class="mx-1 text-blue-500 rounded-circle shadow h-[30px] w-[30px] p-1 hover:bg-gray-400 transition"><font-awesome-icon icon="file-upload"/> </button>
                 <button @click="singlePopUp.classEditing=cls" class="mx-1 text-gray-600 rounded-circle shadow h-[30px] w-[30px] p-1 hover:bg-gray-400 transition"><font-awesome-icon icon="pencil"/> </button>
                 <button @click="singlePopUp.deleteConfirmation=cls" class="mx-1 text-red-500 rounded-circle shadow h-[30px] w-[30px] p-1 hover:bg-gray-400 transition"><font-awesome-icon icon="trash"/> </button>
             </div>
