@@ -45,6 +45,9 @@
         <div class="w-full">
             <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                 <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" role="tablist">
+                    <li class="mr-2" role="presentation" @click="uploadFileTo.type='note'">
+                        <button :class="['inline-block','px-4 py-3', 'rounded-t-lg',{'bg-gradient-to-br from-pink-600 to-blue-400 text-white':uploadFileTo.type==='note'}]">Note</button>
+                    </li>
                     <li class="mr-2" role="presentation" @click="uploadFileTo.type='file'">
                         <button :class="['inline-block','px-4 py-3', 'rounded-t-lg',{'bg-gradient-to-br from-pink-600 to-blue-400 text-white':uploadFileTo.type==='file'}]">File</button>
                     </li>
@@ -53,9 +56,6 @@
                     </li>
                     <li class="mr-2" role="presentation" @click="uploadFileTo.type='http'">
                         <button :class="['inline-block','px-4 py-3', 'rounded-t-lg',{'bg-gradient-to-br from-pink-600 to-blue-400 text-white':uploadFileTo.type==='http'}]">Web URL</button>
-                    </li>
-                    <li class="mr-2" role="presentation" @click="uploadFileTo.type='note'">
-                        <button :class="['inline-block','px-4 py-3', 'rounded-t-lg',{'bg-gradient-to-br from-pink-600 to-blue-400 text-white':uploadFileTo.type==='note'}]">Note</button>
                     </li>
                 </ul>
             </div>
@@ -87,7 +87,6 @@
             <button type="button" class="bg-primary px-3 py-2 mt-3 rounded text-white hover:ring-2"><font-awesome-icon icon="plus"/> Add</button>
         </div>
         <div v-else-if="uploadFileTo.type==='note'" class="flex justify-center items-center flex-column min-h-[300px]">
-            {{note}}
             <Ckeditor v-model="note" :editor="ClassicEditor"></Ckeditor>
             <button @click="saveClassNote(uploadFileTo.id)" type="button" class="bg-primary px-3 py-2 mt-3 rounded text-white hover:ring-2"><font-awesome-icon icon="save"/> Save</button>
         </div>
