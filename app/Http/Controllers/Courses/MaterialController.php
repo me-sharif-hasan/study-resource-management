@@ -226,7 +226,7 @@ class MaterialController extends Controller
             if($note==""||$note==null) throw new \Exception("Note is null");
             $material=new Materials();
             $material->text_content=$note;
-            $material->title=substr(strip_tags($note),0,10).'...'.substr(strip_tags($note),-6);
+            $material->title=mb_substr(strip_tags($note),0,10).'...'.substr(strip_tags($note),-6);
             $material->is_deleted=false;
             $material->access_level=0;
             $material->class_id=$class_id;
