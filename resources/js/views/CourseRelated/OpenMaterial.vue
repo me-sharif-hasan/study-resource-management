@@ -5,7 +5,8 @@
         </youtube-video-player>
         <pdp-reader v-else-if="materialInfo&&materialInfo.type==='application/pdf'" :url="materialInfo.url" class="w-full min-h-screen"></pdp-reader>
         <img v-else-if="materialInfo&&materialInfo.type.split('/')[0]==='image'" :src="materialInfo.url" class="w-full min-h-screen">
-        <div v-else-if="materialInfo&&materialInfo.type.split('/')[1]==='plain'" v-html="materialInfo.text_content">
+        <div v-else-if="materialInfo&&materialInfo.type.split('/')[1]==='plain'">
+            <iframe class="w-full h-full" :srcdoc="materialInfo.text_content"></iframe>
         </div>
     </div>
 </template>
